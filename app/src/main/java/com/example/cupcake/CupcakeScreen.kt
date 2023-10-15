@@ -138,6 +138,9 @@ fun CupcakeApp(
                     onSelectionChanged = { viewModel.setDate(it) },
                     onNextButtonClicked = {
                         navController.navigate(CupcakeScreen.Summary.name)
+                    },
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToStart(viewModel, navController)
                     }
                 )
             }
